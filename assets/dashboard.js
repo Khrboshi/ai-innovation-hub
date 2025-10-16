@@ -1,1 +1,0 @@
-console.log('Dashboard placeholder - add realtime/chat/connectors here');
