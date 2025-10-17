@@ -1,20 +1,78 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'/><title>Dashboard - AI Innovation Hub</title>
-<link rel="stylesheet" href="assets/css/style.css"></head>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard — AI Innovation Hub</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 <body>
-  <header><!-- Navbar --></header>
-  <main class="container">
-    <h1>User Dashboard</h1>
-    <section id="services">
-      <h2>Your Tools & Services</h2>
-      <p>Logged-in users will see their tools here. This is a placeholder view.</p>
-    </section>
-    <section id="chatroom">
-      <h2>Community Chat</h2>
-      <div><!-- Chatroom placeholder (connect to your realtime backend later) --></div>
+  <header class="container nav">
+    <a class="brand" href="index.html"><img src="assets/images/logo.png" alt="logo" class="logo">AI Innovation Hub</a>
+    <nav class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="tools.html">Tools</a></nav>
+    <a class="btn" href="#">Log in</a>
+  </header>
+
+  <main class="container dashboard">
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar">U</div>
+        <div>
+          <strong>Guest User</strong>
+          <small class="muted">role: member</small>
+        </div>
+      </div>
+
+      <div class="services">
+        <h4>Services</h4>
+        <ul>
+          <li>AI Tools Library</li>
+          <li>My Projects</li>
+          <li>Saved Posts</li>
+          <li>Settings</li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="main-area">
+      <div class="top-row">
+        <h1>Dashboard</h1>
+        <p class="muted">Access tools, chat with the community, and manage services.</p>
+      </div>
+
+      <div class="chat-panel">
+        <h2>Community Chat</h2>
+        <div id="chat-logs" class="chat-logs">
+          <!-- messages appended here -->
+        </div>
+
+        <form id="chat-form" class="chat-form">
+          <input id="chat-input" placeholder="Ask the AI assistant or message the community..." autocomplete="off" />
+          <button class="btn" type="submit">Send</button>
+        </form>
+
+        <div class="chat-hint muted">
+          Tip: This is a local demo chat. To connect to a real AI, update <code>assets/js/ai-assistant.js</code>.
+        </div>
+      </div>
+
+      <div class="tools-panel">
+        <h3>Quick Tools</h3>
+        <div class="tools-grid">
+          <div class="card small">Quick Prompt</div>
+          <div class="card small">Image Gen</div>
+          <div class="card small">Code Runner</div>
+          <div class="card small">Notebook</div>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© <span id="year5"></span> AI Innovation Hub</p></div>
+  </footer>
+
+  <script src="assets/js/ai-assistant.js"></script>
   <script src="assets/js/dashboard.js"></script>
+  <script>document.getElementById('year5').textContent = new Date().getFullYear();</script>
 </body>
 </html>
