@@ -1,21 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>About - AI Innovation Hub</title>
-<link rel="stylesheet" href="assets/css/style.css"></head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — AI Innovation Hub</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 <body>
-  <header><!-- Navbar --></header>
-  <main class="container">
+  <!-- Navbar (simple include) -->
+  <header class="container nav">
+    <a class="brand" href="index.html"><img src="assets/images/logo.png" alt="logo" class="logo">AI Innovation Hub</a>
+    <nav class="nav-links"><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="tools.html">Tools</a><a href="dashboard.html">Dashboard</a></nav>
+  </header>
+
+  <main class="container about">
     <h1>About AI Innovation Hub</h1>
-    <p>AI Innovation Hub started as a small idea: make powerful AI tools accessible and safe for everyone. We welcome questions, projects and collaborations. No idea is too small.</p>
-    <h2>Vision</h2>
-    <p>To be the most welcoming learning and innovation hub for AI creators worldwide.</p>
-    <h2>Mission</h2>
-    <p>Provide easy-to-use tools, a friendly community, and educational resources to help people turn ideas into real projects.</p>
-    <section>
-      <h3>Welcome video</h3>
-      <video src="assets/images/about-video.mp4" controls width="640" height="360">Your browser does not support the video tag.</video>
+    <p class="muted">A safe, open space where curious minds can build, learn and launch projects. No question is too small — everyone is welcome.</p>
+
+    <section class="story">
+      <h2>Our Story</h2>
+      <p>Started from the idea that powerful AI should be accessible, safe, and collaborative. We provide tools, guides, and a supportive community to help ideas become innovation.</p>
+    </section>
+
+    <section class="vision">
+      <div>
+        <h3>Vision</h3>
+        <p>To be the most welcoming learning and innovation hub for AI creators worldwide.</p>
+      </div>
+      <div>
+        <h3>Mission</h3>
+        <p>Provide easy-to-use tools, a friendly community, and educational resources to help people turn ideas into real projects.</p>
+      </div>
+    </section>
+
+    <section class="welcome-video">
+      <h3>Welcome Video</h3>
+      <!-- TODO: Replace assets/images/about-video.mp4 with rendered MP4 -->
+      <video controls width="100%" src="assets/images/about-video.mp4">Your browser does not support the video tag.</video>
     </section>
   </main>
-  <footer></footer>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year2"></span> AI Innovation Hub</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
 </body>
 </html>
