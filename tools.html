@@ -1,13 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'/><title>Tools - AI Innovation Hub</title>
-<link rel="stylesheet" href="assets/css/style.css"></head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tools — AI Innovation Hub</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 <body>
-  <header><!-- Navbar --></header>
+  <header class="container nav">
+    <a class="brand" href="index.html"><img src="assets/images/logo.png" alt="logo" class="logo">AI Innovation Hub</a>
+    <nav class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="dashboard.html">Dashboard</a></nav>
+  </header>
+
   <main class="container">
-    <h1>AI Tools</h1>
-    <p>Tools are organized by category. Add/replace tool cards in <code>assets/js/tools-data.js</code> later.</p>
-    <div id="tools-list"></div>
+    <h1>AI Tools Library</h1>
+    <p class="muted">Tools are organized by category. Edit <code>assets/js/tools-data.js</code> to add or change tool cards.</p>
+
+    <div class="tools-controls">
+      <input id="tool-search" placeholder="Search tools (e.g., image, text, code)" />
+      <select id="tool-filter">
+        <option value="">All Categories</option>
+        <option>Text</option>
+        <option>Image</option>
+        <option>Code</option>
+        <option>Audio</option>
+      </select>
+    </div>
+
+    <div id="tools-grid" class="cards-grid">
+      <!-- Sample tool cards -->
+      <div class="card tool">
+        <h3>AI Writer</h3>
+        <p>Text generation assistant (placeholder)</p>
+        <small class="muted">Category: Text</small>
+      </div>
+      <div class="card tool">
+        <h3>Image Studio</h3>
+        <p>Image generation & editing (placeholder)</p>
+        <small class="muted">Category: Image</small>
+      </div>
+      <div class="card tool">
+        <h3>Code Helper</h3>
+        <p>AI-assisted coding (placeholder)</p>
+        <small class="muted">Category: Code</small>
+      </div>
+    </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© <span id="year4"></span> AI Innovation Hub</p></div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year4').textContent = new Date().getFullYear();</script>
 </body>
 </html>
