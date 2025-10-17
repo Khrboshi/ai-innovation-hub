@@ -1,1 +1,6 @@
-@media(max-width:768px){body{padding:8px}}
+@media (max-width:480px){
+  .container{padding:14px}
+  .hero-left h1{font-size:22px}
+  .hero-video{height:200px}
+  .tools-grid{grid-template-columns:repeat(2,1fr)}
+}
